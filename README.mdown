@@ -1,0 +1,43 @@
+# Sluggable posts for Nesta CMS
+
+This plugin allows you to create [Nesta](http://nestacms.com) articles with an numeric filename (probably based on date and serial) but serve the page with an SEO-friendly slug, like so [http://wynnnetherland.com/linked/2011092203/making-blogazine-with-nesta](http://wynnnetherland.com/linked/2011092203/making-blogazine-with-nesta). The slug is optional. As long as the numeric filename path is included, Nesta will redirect to add the current slug.
+
+Sluggable posts provide a few of benefits:
+
+* You can change the slug if your headline changes and Nesta will automatically find the new article.
+* You don't have to know your headline and slug when you create your file.
+* Mangled, truncated URLs can still find the way to the latest version of your page.
+
+### Setting the slug
+
+Slugs can be set in the page [metadata](http://nestacms.com/docs/creating-content/metadata-reference):
+
+    date: 2011-09-24
+    slug: this-is-my-first-sluggable-post
+
+    # This is the headline
+
+Alternatively, if not set, Sluggable will dasherize the heading to create the slug.
+
+### Considerations
+
+In order to avoid a `301` redirect for all sluggable page links on your site, use the `permalink` method in your templates instead of `abspath`.
+
+### TODO
+
+* Nesta CLI option to create posts
+
+## Note on Patches/Pull Requests
+
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but
+   bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+## Copyright
+
+Copyright (c) 2011 Wynn Netherland. See LICENSE for details.
