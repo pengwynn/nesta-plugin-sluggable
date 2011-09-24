@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Wynn Netherland"]
   s.email       = ["wynn.netherland@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Sluggable posts for Nesta}
+  s.description = %q{Sluggable posts for Nesta CMS}
 
   s.rubyforge_project = "nesta-plugin-sluggable"
 
