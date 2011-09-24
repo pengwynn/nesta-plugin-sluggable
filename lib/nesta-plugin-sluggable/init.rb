@@ -51,4 +51,39 @@ module Nesta
     end
 
   end
+
+  module Commands
+    module Slug
+      class Post
+        include Command
+
+        def initialize(path, format="mdown", date=Date.today.strftime("%Y-%m-%d"))
+          @path = File.join(Nesta::Config.content_path, path)
+          @format = format
+          @date = date
+        end
+
+        def basename
+          daily_count = Dir.glob("#{@path}*").size + 1
+          daily_count.to_s.rjust(2, "0")
+        end
+
+        def write_file(path)
+          File.open(path, "w") do |f|
+            puts "Saving #{path}"
+            f.puts "date: #{@date}"
+            f.puts "\n"
+          end
+        end
+
+        def execute
+          path = File.join(@path, basename, ".#{@format}" )
+          write_file(path)
+
+          system("$EDITOR #{path}") if ENV['EDITOR']
+        end
+
+      end
+    end
+  end
 end
