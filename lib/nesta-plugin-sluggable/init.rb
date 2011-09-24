@@ -20,7 +20,7 @@ module Nesta
     helpers Nesta::Plugin::Sluggable::Helpers
 
     before do
-      params[:splat] = [ Nesta::Sluggable.resolve_path(request.path) ]
+      params[:splat] = [ Nesta::Plugin::Sluggable.resolve_path(request.path) ]
     end
 
     after do
