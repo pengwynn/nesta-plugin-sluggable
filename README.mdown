@@ -8,6 +8,12 @@ Sluggable posts provide a few of benefits:
 * You don't have to know your headline and slug when you create your file.
 * Mangled, truncated URLs can still find the way to the latest version of your page.
 
+### Installation
+
+To install add the plugin to your Nesta Gemfile
+
+    gem "nesta-plugin-sluggable"
+
 ### Setting the slug
 
 Slugs can be set in the page [metadata](http://nestacms.com/docs/creating-content/metadata-reference):
