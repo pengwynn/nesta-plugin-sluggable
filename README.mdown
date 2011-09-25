@@ -2,7 +2,7 @@
 
 This plugin allows you to create [Nesta](http://nestacms.com) articles with an numeric filename (probably based on date and serial) but serve the page with an SEO-friendly slug, like so [http://wynnnetherland.com/linked/2011092203/making-blogazine-with-nesta](http://wynnnetherland.com/linked/2011092203/making-blogazine-with-nesta). The slug is optional. As long as the numeric filename path is included, Nesta will redirect to add the current slug.
 
-Sluggable posts provide a few of benefits:
+Sluggable posts provide a few benefits:
 
 * You can change the slug if your headline changes and Nesta will automatically find the new article.
 * You don't have to know your headline and slug when you create your file.
